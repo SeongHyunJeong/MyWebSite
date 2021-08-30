@@ -45,10 +45,9 @@ $(document).ready(function() {
 
 
 
-  (function headerControl() { //화면 사이즈에 따른 header
+  function headerControl() { //화면 사이즈에 따른 header
     var windowWidth = $(window).width();
-    var headerContainer = $(".header_class").clone();
-    if (windowWidth <= 800) {
+    if (windowWidth <= 900) {
       $(".header_text").hide();
       $(".header_bar").show();
       $(".bar_menu").hide();
@@ -56,16 +55,17 @@ $(document).ready(function() {
       $(".header_text").show();
       $(".header_bar").hide();
     }
-  }());
+  };
+
+  $(document).ready(function() {
+
+	headerControl();
+
+});
+
   $(window).resize(function() {
-    var windowWidth = $(window).width();
-    if (windowWidth <= 800) {
-      $(".header_text").hide();
-      $(".header_bar").show();
-    } else {
-      $(".header_text").show();
-      $(".header_bar").hide();
-    }
+    //페이지 사이즈 변경시
+    headerControl();
   });
   /*
   var headerContainer = $(".header_class").clone();
