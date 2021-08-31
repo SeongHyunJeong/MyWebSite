@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
 
-  function headerControl() { //화면 사이즈에 따른 header
+/*  function headerControl() { //화면 사이즈에 따른 header
     var windowWidth = $(window).width();
     if (windowWidth <= 900) {
       $(".header_text").hide();
@@ -55,12 +55,12 @@ $(document).ready(function() {
       $(".header_text").show();
       $(".header_bar").hide();
     }
-  };
+  };*/
 
   $(document).ready(function() {
-
-	headerControl();
-
+    //페이지 준비시
+	/*headerControl();*/
+  alert("아직 모바일에 대한 환경이 완벽히 구축되지 않았습니다.-정승현-")
 });
 
   $(window).resize(function() {
