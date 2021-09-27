@@ -36,26 +36,22 @@ $(document).ready(function() {
   });
 
   $(".bar").click(function() {
-    if($(".bar_menu").css("display") == "none")
+    if($(".bar_menu").css("display") == "none"){
       $(".bar_menu").show();
-    else
+      $(".bar3").hide();
+      $(".bar1").css({'transform':'rotate('+35+'deg) translateX( '+12+'px ) translateY( '+12+'px )'})
+      $(".bar2").css({'transform':'rotate('+-35+'deg)'})
+    }
+    else{
       $(".bar_menu").hide();
+      $(".bar1").css({'transform':'rotate('+0+'deg) translateY( '+0+'px )'})
+      $(".bar2").css({'transform':'rotate('+0+'deg)'})
+      $(".bar3").show();
+    }
 
   });
 
 
-
-/*  function headerControl() { //화면 사이즈에 따른 header
-    var windowWidth = $(window).width();
-    if (windowWidth <= 900) {
-      $(".header_text").hide();
-      $(".header_bar").show();
-      $(".bar_menu").hide();
-    } else {
-      $(".header_text").show();
-      $(".header_bar").hide();
-    }
-  };*/
 
   $(document).ready(function() {
     //페이지 준비시
@@ -63,10 +59,6 @@ $(document).ready(function() {
   alert("아직 모바일에 대한 환경이 완벽히 구축되지 않았습니다.-정승현-")
 });
 
-  $(window).resize(function() {
-    //페이지 사이즈 변경시
-    headerControl();
-  });
   /*
   var headerContainer = $(".header_class").clone();
   $(window).resize(function(){ //화면 사이즈가 변경되면 실행
