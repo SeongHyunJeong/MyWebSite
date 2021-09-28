@@ -37,27 +37,21 @@ $(document).ready(function() {
 
   $(".bar").click(function() {
     if($(".bar_menu").css("display") == "none"){
+      $(".bar").removeClass('bar_close');
+      $(".bar").addClass('bar_open');
       $(".bar_menu").show();
-      $(".bar3").hide();
-      $(".bar1").css({'transform':'rotate('+35+'deg) translateX( '+12+'px ) translateY( '+12+'px )'})
-      $(".bar2").css({'transform':'rotate('+-35+'deg)'})
+
     }
     else{
+      $(".bar").removeClass('bar_open');
+      $(".bar").addClass('bar_close');
       $(".bar_menu").hide();
-      $(".bar1").css({'transform':'rotate('+0+'deg) translateY( '+0+'px )'})
-      $(".bar2").css({'transform':'rotate('+0+'deg)'})
-      $(".bar3").show();
     }
 
   });
 
 
 
-  $(document).ready(function() {
-    //페이지 준비시
-	/*headerControl();*/
-  alert("아직 모바일에 대한 환경이 완벽히 구축되지 않았습니다.-정승현-")
-});
 
   /*
   var headerContainer = $(".header_class").clone();

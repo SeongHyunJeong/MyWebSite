@@ -43,9 +43,15 @@ header{display: flex; position: fixed; width: 95vw; }
 .header_text ul li a:hover{color: white; opacity: 1;}
 
 .header_bar{display: none;}
-.bar_close, .bar_open{padding: 20px; cursor: pointer; margin: 0;}
+.bar_open .bar1{transform: rotate(45deg) translateX(7px) translateY(7px); transition-duration: .5s;}
+.bar_close .bar1{transform: rotate(0deg) translateX(0px) translateY(0px); transition-duration: .5s;}
+.bar_open .bar2{transform:rotate(-45deg); transition-duration: .5s;}
+.bar_close .bar2{transform:rotate(0deg); transition-duration: .5s;}
+.bar_open .bar3{transform:scale(0); transition-duration: .3s; }
+.bar_close .bar3{transform:scale(1); transition-duration: .3s; }
 .bar_menu{display: none; grid-gap: 20px; color: grey; font-size: 17px; list-style: none; padding: 0; rid-gap: 21px;
 position: absolute; top: 50px; right: 2px;}
+.bar_menu li{margin-bottom: 1rem;}
 .bar_menu li a{font-weight: bold; cursor: pointer; color: grey; opacity: 0.8;}
 .bar1, .bar2, .bar3 { width: 35px; height: 5px; background-color: grey; margin: 6px 0;}
 
@@ -57,27 +63,30 @@ position: absolute; top: 50px; right: 2px;}
 		white-space: pre; line-height: 1; letter-spacing: 0.1rem; padding-top: 0.2em;
 		animation-name: cursor; animation-duration: 0.3s; border-right: 2px solid #ccc; }
 
-#about{position: relative; height: 150vh; background-color: #fff; width: 100%; z-index: -1;}
-.about_profile{margin-top: 30px; margin-left: 5vw; margin-right: 12vw; width: 60vw; height: 400px; vtext-align: left; }
+#about{height: 150vh; background-color: #fff; width: 100%; z-index: -1;}
+.about_profile{margin-top: 30px; margin-left: 5vw; margin-right: 12vw; width: 35vw; height: 400px; vtext-align: left; }
 .about_profile h2{margin-top: 10px; color: black; font-size: 20px; font-weight: bold;}
-.about_title{position: absolute; top: 0; right:20px;width: 100%; text-align: right; margin-left: 70px;}
-.about_title p{font-size: 40px; line-height: 4rem; color: black;
-		margin-top: 20px;}
+.about_title{position: relative; top: -350px; }
+.about_title p{font-size: 2.6rem; line-height: 4rem; color: black;
+		margin-top: 20px; text-align: right;}
 .profile_img{ width: 398px; height: 330px;
 	background-image: url(../images/profile02.jpg); background-repeat: no-repeat;
     background-position: 20% 100%; background-size: 100%;}
 .profile_img:after{width: inherit; height: inherit; display: block; content: ""; border: 3px solid #ffdb45;}
-.about_text{position: relative; margin-left: 5vw; margin-top: 90px; font-size: 19px; letter-spacing: 0.2px; line-height: 1.95;}
+.about_text{position: relative; top: -80px; margin-left: 5vw; font-size: 19px; letter-spacing: 0.2px; line-height: 1.95;}
 .about_text_item{margin-top: 40px;}
 #memories {height: 100vh; background-color: #ccc; width: 100%; z-index: 500;}
 #learning {height: 100vh; background-color: #ccf; width: 100%; z-index: 500;}
-#footer {height: 20vh; background-color: #fff; width: 100%; z-index: 500;}
+#footer {height: 20vh; background-col
+	or: #fff; width: 100%; z-index: 500;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
 		.header_text{display: none;}
 		.header_bar{display: flex;}
-
+		.about_title{top: -50px;}
+		.about_title p{font-size: 2rem; line-height: 4rem; color: black;
+				text-align: right;}
 }
 
 
